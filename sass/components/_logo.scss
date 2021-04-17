@@ -1,0 +1,15 @@
+.logo-header {
+  @extend %logo;
+
+  &--black {
+    color: #000;
+  }
+}
+
+.logo-footer {
+  @extend %logo;
+
+  &--white {
+    color: $secondary-text-color;
+  }
+}

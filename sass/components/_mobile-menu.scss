@@ -1,0 +1,202 @@
+.mobile-menu {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  max-width: 480px;
+  height: 100vh;
+  padding: 48px 40px;
+  background-color: $secondary-text-color;
+  transform: translateY(-100%) translateX(-50%);
+
+  @include transit(transform);
+
+  @media screen and (max-width: 479.9px) {
+    padding: 48px 25px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767.9px) {
+  .is-open {
+    transform: translateY(0) translateX(-50%);
+  }
+}
+
+.mobile-menu__close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  line-height: 0.5;
+  background-color: $secondary-text-color;
+
+  @include transit(color);
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    color: $secondary-btn-color;
+  }
+}
+
+.mobile-menu__button-icon {
+  width: 40px;
+  height: 40px;
+  fill: currentColor;
+}
+
+.mobile-menu__list {
+  margin-bottom: auto;
+}
+
+.mobile-menu__item {
+  display: block;
+  &:not(:last-child) {
+    margin-bottom: 15px;
+    @media screen and (min-width: $mobile) {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+.mobile-menu__link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  color: $primary-btn-color;
+
+  @include transit(color);
+
+  &--current {
+    color: $secondary-btn-color;
+  }
+
+  @media screen and (min-width: $mobile) {
+    font-size: 40px;
+    line-height: 47px;
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    color: $secondary-btn-color;
+  }
+}
+
+.mobile-menu__contacts {
+  margin-bottom: 40px;
+
+  @media screen and (min-width: $mobile) {
+    margin-bottom: 64px;
+  }
+}
+
+.mobile-menu__contacts-item {
+  display: block;
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+
+    @media screen and (min-width: $mobile) {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+.mobile-menu__contacts-link {
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+
+  @include transit(color);
+
+  &--tel {
+    font-size: 24px;
+    line-height: 20px;
+    color: $secondary-btn-color;
+
+    @media screen and (min-width: $mobile) {
+      font-size: 34px;
+      line-height: 40px;
+    }
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      color: #000;
+    }
+  }
+
+  &--mail {
+    font-size: 18px;
+    line-height: 16px;
+    color: $primary-text-color;
+
+    @media screen and (min-width: $mobile) {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      color: #000;
+    }
+  }
+}
+
+.mobile-menu__social-links {
+  display: flex;
+}
+
+.mobile-menu__social-item {
+  padding-right: 5px;
+
+  @media screen and (min-width: $mobile) {
+    padding-right: 10px;
+  }
+
+  &:not(:first-child) {
+    padding-left: 5px;
+
+    @media screen and (min-width: $mobile) {
+      padding-left: 10px;
+    }
+  }
+  &:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+}
+
+.mobile-menu__social-link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  color: $secondary-btn-color;
+
+  @include transit(color);
+
+  @media screen and (min-width: $mobile) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    color: #000;
+  }
+}

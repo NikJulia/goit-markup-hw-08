@@ -1,0 +1,28 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  transition: 500ms all ease;
+  overflow-y: scroll;
+
+  @media screen and (max-width: 479.9px) {
+    padding: 50px 15px;
+  }
+
+  @media screen and (min-width: $mobile) {
+    padding: 93px 15px;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: 1199.9px) {
+    padding: 208px 159px;
+  }
+
+  &--hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}

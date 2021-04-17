@@ -1,0 +1,65 @@
+.team-members {
+  background-color: $secondary-bg-color;
+
+  &__cards {
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -15px;
+    }
+    @media screen and (min-width: $desktop) {
+      flex-wrap: nowrap;
+    }
+  }
+}
+
+.team-members__card {
+  background-color: $secondary-text-color;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 60px) / 2);
+    margin: 15px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 90px) / 4);
+  }
+
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.team-members__card-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.team-members__info {
+  padding-top: 30px;
+  padding-bottom: 24px;
+  text-align: center;
+
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 30px;
+  }
+}
+
+.team-members__header {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 500;
+  color: $title-text-color;
+}
+
+.team-members__position {
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}

@@ -1,0 +1,57 @@
+.button--primary {
+  @extend %button;
+  color: $secondary-text-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: $secondary-btn-color;
+
+  @include transit(color);
+  @include transit(background-color);
+  @include transit(box-shadow);
+
+  &:hover,
+  &:focus {
+    color: $primary-btn-color;
+    cursor: pointer;
+    background-color: $secondary-bg-color;
+  }
+}
+
+.button--hero {
+  @extend %button;
+  padding: 10px 32px;
+}
+
+.button--subscription {
+  @extend %button;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 29px;
+}
+
+.button--secondary {
+  @extend %button;
+  font-weight: 500;
+  padding: 6px 22px;
+  color: $primary-btn-color;
+  background-color: $secondary-bg-color;
+
+  @include transit(color);
+  @include transit(background-color);
+  @include transit(box-shadow);
+
+  &:hover,
+  &:focus {
+    color: $secondary-text-color;
+    cursor: pointer;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    background-color: $secondary-btn-color;
+  }
+}
+
+.button--submit {
+  @extend %button;
+  width: 200px;
+  height: 50px;
+  padding: 10px 55px;
+}

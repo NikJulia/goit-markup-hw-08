@@ -1,0 +1,109 @@
+.form {
+  padding: 40px;
+
+  @media screen and (max-width: 479.9px) {
+    padding: 40px 15px;
+  }
+
+  &__header {
+    display: block;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $title-text-color;
+
+    @media screen and (max-width: 479.9px) {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    @media screen and (min-width: $mobile) {
+      width: 370px;
+      // height: 60px;
+      margin-bottom: 12px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 448px;
+      height: 23px;
+      line-height: 23px;
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    height: 14px;
+    margin-bottom: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: $primary-text-color;
+  }
+
+  &__field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  &__field--comments {
+    margin-bottom: 20px;
+  }
+
+  &__button {
+    text-align: center;
+  }
+}
+
+.form__input,
+.form__textarea {
+  padding: 11px 15px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  font-size: 12px;
+
+  @include transit(border-color);
+
+  .form__field:focus-within > &,
+  .form__field:focus-within > & {
+    outline: none;
+    border: 1px solid $secondary-btn-color;
+  }
+}
+
+.form__input {
+  padding-left: 40px;
+  height: 40px;
+}
+
+.form__textarea {
+  height: 120px;
+  resize: none;
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.form__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  fill: $primary-btn-color;
+
+  @include transit(fill);
+
+  .form__field:focus-within > & {
+    fill: $secondary-btn-color;
+  }
+}

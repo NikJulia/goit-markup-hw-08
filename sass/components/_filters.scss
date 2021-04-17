@@ -1,0 +1,32 @@
+.filters {
+  @media screen and (max-width: 767.9px) {
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
+}
+
+.filters__items {
+  display: flex;
+  margin: -8px;
+
+  @media screen and (max-width: 767.9px) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  @media screen and (min-width: $tablet) {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+}
+
+.filters__item {
+  margin: 8px;
+}

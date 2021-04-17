@@ -1,0 +1,55 @@
+/* Спрятанные заголовки */
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+/* Контейнер */
+.container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media screen and (min-width: $mobile) {
+    width: 480px;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 1200px;
+  }
+}
+
+/* Main content - Section */
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.section__header {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 33px;
+  text-align: center;
+  color: $title-text-color;
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 42px;
+  }
+}

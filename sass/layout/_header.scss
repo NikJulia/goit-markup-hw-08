@@ -1,0 +1,132 @@
+.page-header {
+  &--portfolio {
+    border-bottom: 1px solid #ececec;
+  }
+
+  &__container {
+    display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+// Mobile
+@media screen and (max-width: 767.9px) {
+  .page-header {
+    &__container {
+      max-width: 100%;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+
+  .page-header__contacts {
+    display: none;
+  }
+
+  .page-header__menu-button {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    line-height: 0.5;
+    color: #000;
+    background-color: transparent;
+
+    @include transit(color);
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      color: $secondary-btn-color;
+    }
+  }
+
+  .page-header__icon {
+    width: 40px;
+    height: 40px;
+    fill: currentColor;
+  }
+}
+
+// Tablet
+@media screen and (min-width: $tablet) {
+  .page-header {
+    font-weight: 500;
+    background-color: $secondary-text-color;
+  }
+
+  .page-header__container {
+    display: flex;
+    max-width: 768px;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .page-header__menu-button {
+    display: none;
+  }
+
+  .page-header__contacts {
+    display: block;
+    margin-left: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .page-header__contacts-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    fill: currentColor;
+  }
+
+  .page-header__contacts-link {
+    display: flex;
+    align-items: center;
+    color: $primary-text-color;
+
+    @include transit(color);
+
+    &:hover,
+    &:focus {
+      color: $secondary-btn-color;
+    }
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: 1199.9px) {
+    .page-header__contacts-item {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  // Desktop
+  @media screen and (min-width: $desktop) {
+    .page-header {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    .page-header__container {
+      max-width: 1200px;
+    }
+
+    .page-header__contacts {
+      display: flex;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    .page-header__contacts-item {
+      &:not(:first-child) {
+        margin-left: 50px;
+      }
+    }
+  }
+}

@@ -34,12 +34,10 @@
     color: #000;
     background-color: transparent;
 
-    @include transit(color);
-
     &:hover,
     &:focus {
-      cursor: pointer;
       color: $secondary-btn-color;
+      cursor: pointer;
     }
   }
 
@@ -76,12 +74,6 @@
     font-size: 12px;
     line-height: 14px;
   }
-  .page-header__contacts-icon {
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
-    fill: currentColor;
-  }
 
   .page-header__contacts-link {
     display: flex;
@@ -92,8 +84,16 @@
 
     &:hover,
     &:focus {
+      cursor: pointer;
       color: $secondary-btn-color;
     }
+  }
+
+  .page-header__contacts-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    fill: currentColor;
   }
 
   @media screen and (min-width: $tablet) and (max-width: 1199.9px) {

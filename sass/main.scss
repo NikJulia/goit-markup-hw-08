@@ -1,8 +1,18 @@
+// Utils
 @import 'utils/breakpoints';
 @import 'utils/variables';
-@import 'base/fonts';
-@import 'base/defaults';
+@import 'utils/visually-hidden';
 @import 'utils/placeholders';
 @import 'utils/mixins';
+
+// Base
+@import 'base/fonts';
+@import 'base/defaults';
+@import 'base/container';
+@import 'base/section';
+
+// Components
 @import 'components/main';
+
+// Layout
 @import 'layout/main';

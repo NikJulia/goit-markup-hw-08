@@ -1,4 +1,43 @@
 @charset "UTF-8";
+/* Спрятанные заголовки */
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.button--primary, .button--hero, .button--subscription, .button--secondary, .button--submit {
+  display: inline-block;
+  padding: 10px 32px;
+  min-width: 73px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+}
+
+.logo-header, .logo-footer {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  color: #2196f3;
+}
+
+@media screen and (min-width: 1200px) {
+  .logo-header, .logo-footer {
+    font-size: 26px;
+    line-height: 31px;
+  }
+}
+
 /* raleway-700 - latin-ext */
 @font-face {
   font-family: 'Raleway';
@@ -88,45 +127,6 @@ ul {
   list-style: none;
 }
 
-.button--primary, .button--hero, .button--subscription, .button--secondary, .button--submit {
-  display: inline-block;
-  padding: 10px 32px;
-  min-width: 73px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 30px;
-  letter-spacing: 0.06em;
-  text-align: center;
-  border: none;
-  border-radius: 4px;
-}
-
-.logo-header, .logo-footer {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-  letter-spacing: 0.03em;
-  color: #2196f3;
-}
-
-@media screen and (min-width: 1200px) {
-  .logo-header, .logo-footer {
-    font-size: 26px;
-    line-height: 31px;
-  }
-}
-
-/* Спрятанные заголовки */
-.visually-hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-}
-
 /* Контейнер */
 .container {
   width: 100%;
@@ -163,24 +163,6 @@ ul {
   .section {
     padding-top: 94px;
     padding-bottom: 94px;
-  }
-}
-
-.section__header {
-  margin-top: 0;
-  margin-bottom: 30px;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 33px;
-  text-align: center;
-  color: #212121;
-}
-
-@media screen and (min-width: 1200px) {
-  .section__header {
-    margin-bottom: 50px;
-    font-size: 36px;
-    line-height: 42px;
   }
 }
 
@@ -550,6 +532,24 @@ ul {
   width: 200px;
   height: 50px;
   padding: 10px 55px;
+}
+
+.section__header {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 33px;
+  text-align: center;
+  color: #212121;
+}
+
+@media screen and (min-width: 1200px) {
+  .section__header {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 42px;
+  }
 }
 
 .social-links--main {

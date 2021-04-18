@@ -4,9 +4,7 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background-color: $secondary-btn-color;
 
-  @include transit(color);
-  @include transit(background-color);
-  @include transit(box-shadow);
+  @include transit(all);
 
   &:hover,
   &:focus {
@@ -35,9 +33,7 @@
   color: $primary-btn-color;
   background-color: $secondary-bg-color;
 
-  @include transit(color);
-  @include transit(background-color);
-  @include transit(box-shadow);
+  @include transit(all);
 
   &:hover,
   &:focus {

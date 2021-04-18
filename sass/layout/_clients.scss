@@ -29,25 +29,26 @@
     }
   }
 
+  &__item-link {
+    display: block;
+    border: 1px solid $icon-primary-color;
+    border-radius: 4px;
+    color: $icon-primary-color;
+
+    @include transit(border-color);
+
+    &:hover,
+    &:focus {
+      border: 1px solid $secondary-btn-color;
+      color: $secondary-btn-color;
+    }
+  }
+
   &__icon {
     max-width: 100%;
     height: 90px;
     fill: currentColor;
-  }
-}
 
-.clients__item-link {
-  display: block;
-  border: 1px solid $icon-primary-color;
-  border-radius: 4px;
-  color: $icon-primary-color;
-
-  @include transit(color);
-  @include transit(border-color);
-
-  &:hover,
-  &:focus {
-    border: 1px solid $secondary-btn-color;
-    color: $secondary-btn-color;
+    @include transit(color);
   }
 }

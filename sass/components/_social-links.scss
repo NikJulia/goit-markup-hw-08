@@ -28,6 +28,8 @@
     width: 20px;
     height: 20px;
     fill: currentColor;
+
+    @include transit(fill);
   }
 
   .social-links__item-link {
@@ -40,8 +42,8 @@
 
     &--main {
       color: $icon-primary-color;
+      background-color: transparent;
 
-      @include transit(color);
       @include transit(background-color);
     }
 
@@ -57,5 +59,13 @@
       color: $secondary-text-color;
       background-color: $secondary-btn-color;
     }
+  }
+
+  .social-links__icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+
+    @include transit(color);
   }
 }

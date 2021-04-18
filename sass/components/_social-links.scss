@@ -24,14 +24,6 @@
     }
   }
 
-  .social-links__icon {
-    width: 20px;
-    height: 20px;
-    fill: currentColor;
-
-    @include transit(fill);
-  }
-
   .social-links__item-link {
     display: inline-flex;
     align-items: center;
@@ -66,6 +58,11 @@
     height: 20px;
     fill: currentColor;
 
-    @include transit(color);
+    @include transit(fill);
+
+    .social-links__item-link:hover &,
+    .social-links__item-link:focus & {
+      fill: $secondary-btn-color;
+    }
   }
 }
